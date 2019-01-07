@@ -4,8 +4,8 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="table.StudentsEntity" table="students" schema="hibernate">
-        <property name="sid" column="sid"/>
+    <class name="table.StudentsEntity" table="students" schema="hibernate_17">
+        <id name="sid" column="sid"/>
         <property name="sname" column="sname"/>
         <property name="gender" column="Gender"/>
         <property name="birthday" column="birthday"/>

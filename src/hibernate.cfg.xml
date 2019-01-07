@@ -4,10 +4,10 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:mysql://localhost:3306/mysql</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/hibernate_17</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-     <property name="connection.username"> root</property>
-     <property name="connection.password"> 123456</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">123456</property>
     <mapping class="table.StudentsEntity"/>
     <mapping resource="table/StudentsEntity.hbm.xml"/>
 

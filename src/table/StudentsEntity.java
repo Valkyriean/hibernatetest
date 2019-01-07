@@ -1,28 +1,24 @@
 package table;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "students", schema = "hibernate", catalog = "")
+@Table(name = "students", schema = "hibernate_17", catalog = "")
 public class StudentsEntity {
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Integer sid;
+    private int sid;
     private String sname;
     private String gender;
     private Date birthday;
     private String address;
 
-    @Basic
+    @Id
     @Column(name = "sid")
-    public Integer getSid() {
+    public int getSid() {
         return sid;
     }
 
-    public void setSid(Integer sid) {
+    public void setSid(int sid) {
         this.sid = sid;
     }
 
@@ -73,7 +69,7 @@ public class StudentsEntity {
 
         StudentsEntity that = (StudentsEntity) o;
 
-        if (sid != null ? !sid.equals(that.sid) : that.sid != null) return false;
+        if (sid != that.sid) return false;
         if (sname != null ? !sname.equals(that.sname) : that.sname != null) return false;
         if (gender != null ? !gender.equals(that.gender) : that.gender != null) return false;
         if (birthday != null ? !birthday.equals(that.birthday) : that.birthday != null) return false;
@@ -84,7 +80,7 @@ public class StudentsEntity {
 
     @Override
     public int hashCode() {
-        int result = sid != null ? sid.hashCode() : 0;
+        int result = sid;
         result = 31 * result + (sname != null ? sname.hashCode() : 0);
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
